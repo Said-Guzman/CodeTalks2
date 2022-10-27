@@ -2,13 +2,16 @@
 
 const numbers = [48, 20, 18, 7, 12,9, 8,10,12, 96, 3,36,51];
 
-let divid = numbers.filter(function(item){
-    return item % 3 === 0 && item % 6 === 0
-} 
-)
-let end = divid.filter(function(item2){
-  divid.splice(item2 % 9 == 0)
-})
+let divid = numbers.filter(function(item)
+   {{if (item % 9 == 0)
+      return false
+    } { if (item % 3 == 0 && item % 6 == 0)
+      return true
+    }
+
+}
+  
+);
 console.log(divid)
 
 
